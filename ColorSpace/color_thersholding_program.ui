@@ -1,0 +1,842 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Color_Thersholding_Program</class>
+ <widget class="QMainWindow" name="Color_Thersholding_Program">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1600</width>
+    <height>900</height>
+   </rect>
+  </property>
+  <property name="mouseTracking">
+   <bool>false</bool>
+  </property>
+  <property name="windowTitle">
+   <string>Color Thersholding Program</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QScrollArea" name="scrollArea">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1600</width>
+      <height>900</height>
+     </rect>
+    </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOn</enum>
+    </property>
+    <property name="horizontalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOn</enum>
+    </property>
+    <property name="widgetResizable">
+     <bool>false</bool>
+    </property>
+    <widget class="QWidget" name="scrollAreaWidgetContents">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>1920</width>
+       <height>1080</height>
+      </rect>
+     </property>
+     <widget class="QLabel" name="Title">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>135</y>
+        <width>191</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Color Filter Find</string>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="Box_Ch1_min">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>415</y>
+        <width>60</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>60</width>
+        <height>26</height>
+       </size>
+      </property>
+      <property name="maximum">
+       <number>255</number>
+      </property>
+      <property name="value">
+       <number>0</number>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="Box_Ch2_min">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>415</y>
+        <width>60</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>60</width>
+        <height>26</height>
+       </size>
+      </property>
+      <property name="maximum">
+       <number>255</number>
+      </property>
+      <property name="value">
+       <number>0</number>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="Box_Ch3_min">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>415</y>
+        <width>60</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>60</width>
+        <height>26</height>
+       </size>
+      </property>
+      <property name="maximum">
+       <number>255</number>
+      </property>
+      <property name="value">
+       <number>0</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="Color_1">
+      <property name="geometry">
+       <rect>
+        <x>65</x>
+        <y>390</y>
+        <width>31</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Ch1</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="Color_2">
+      <property name="geometry">
+       <rect>
+        <x>121</x>
+        <y>390</y>
+        <width>31</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Ch2</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="Color_3">
+      <property name="geometry">
+       <rect>
+        <x>185</x>
+        <y>390</y>
+        <width>31</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Ch3</string>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="Box_Ch1_max">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>465</y>
+        <width>60</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>60</width>
+        <height>26</height>
+       </size>
+      </property>
+      <property name="maximum">
+       <number>255</number>
+      </property>
+      <property name="value">
+       <number>255</number>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="Box_Ch2_max">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>465</y>
+        <width>60</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>60</width>
+        <height>26</height>
+       </size>
+      </property>
+      <property name="maximum">
+       <number>255</number>
+      </property>
+      <property name="value">
+       <number>255</number>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="Box_Ch3_max">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>465</y>
+        <width>60</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>60</width>
+        <height>26</height>
+       </size>
+      </property>
+      <property name="maximum">
+       <number>255</number>
+      </property>
+      <property name="value">
+       <number>255</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_Box_min">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>415</y>
+        <width>31</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>min</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lable_Box_max">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>465</y>
+        <width>31</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>max</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="video_Ch1">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>20</y>
+        <width>320</width>
+        <height>240</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>video Ch1</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="video_Ch2">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>280</y>
+        <width>320</width>
+        <height>240</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>video Ch2</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="video_Ch3">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>540</y>
+        <width>320</width>
+        <height>240</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>video Ch3</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="video_original">
+      <property name="geometry">
+       <rect>
+        <x>1120</x>
+        <y>540</y>
+        <width>320</width>
+        <height>240</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>video origin</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_Ch1">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>0</y>
+        <width>60</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Ch1</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_Ch2">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>260</y>
+        <width>60</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Ch2</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_Ch3">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>520</y>
+        <width>60</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Ch3</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_origin">
+      <property name="geometry">
+       <rect>
+        <x>1120</x>
+        <y>520</y>
+        <width>59</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>original</string>
+      </property>
+     </widget>
+     <widget class="QSlider" name="Slider_Ch1_min">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>505</y>
+        <width>16</width>
+        <height>160</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <number>255</number>
+      </property>
+      <property name="value">
+       <number>0</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="QSlider" name="Slider_Ch1_max">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>675</y>
+        <width>16</width>
+        <height>160</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <number>255</number>
+      </property>
+      <property name="value">
+       <number>255</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="QSlider" name="Slider_Ch2_max">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>675</y>
+        <width>16</width>
+        <height>160</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <number>255</number>
+      </property>
+      <property name="value">
+       <number>255</number>
+      </property>
+      <property name="sliderPosition">
+       <number>255</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="QSlider" name="Slider_Ch2_min">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>505</y>
+        <width>16</width>
+        <height>160</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <number>255</number>
+      </property>
+      <property name="value">
+       <number>0</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="QSlider" name="Slider_Ch3_max">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>675</y>
+        <width>16</width>
+        <height>160</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <number>255</number>
+      </property>
+      <property name="value">
+       <number>255</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="QSlider" name="Slider_Ch3_min">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>505</y>
+        <width>16</width>
+        <height>160</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <number>255</number>
+      </property>
+      <property name="value">
+       <number>0</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>575</y>
+        <width>59</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>min</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>745</y>
+        <width>59</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>max</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_origin_2">
+      <property name="geometry">
+       <rect>
+        <x>1120</x>
+        <y>0</y>
+        <width>161</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>transformed</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="video_global">
+      <property name="geometry">
+       <rect>
+        <x>1120</x>
+        <y>20</y>
+        <width>320</width>
+        <height>240</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Video transformed</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="button_saveWhite">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>175</y>
+        <width>80</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>saveWhite</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="button_saveGreen">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>215</y>
+        <width>80</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>saveGreen</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="button_saveFigure">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>255</y>
+        <width>80</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>saveFigure</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="button_saveFile">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>175</y>
+        <width>80</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>saveFile</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="button_loadFile">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>215</y>
+        <width>80</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>loadFile</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="button_resetTable">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>255</y>
+        <width>80</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>resetTable</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="video_Table_Filtered">
+      <property name="geometry">
+       <rect>
+        <x>1120</x>
+        <y>280</y>
+        <width>320</width>
+        <height>240</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>video table</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_table">
+      <property name="geometry">
+       <rect>
+        <x>1120</x>
+        <y>260</y>
+        <width>60</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>table</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="button_start">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>295</y>
+        <width>80</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Show !</string>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="spinbox_fps">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>325</y>
+        <width>84</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>150</number>
+      </property>
+      <property name="value">
+       <number>30</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_Time_Interval">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>325</y>
+        <width>31</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>fps</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="button_pause">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>295</y>
+        <width>80</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Pause</string>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="spinbox_camera">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>355</y>
+        <width>78</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <number>20</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>360</y>
+        <width>111</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Camera Number</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="video_Ch1_GRAY">
+      <property name="geometry">
+       <rect>
+        <x>690</x>
+        <y>20</y>
+        <width>320</width>
+        <height>240</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Ch1 Gray</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="video_Ch2_GRAY">
+      <property name="geometry">
+       <rect>
+        <x>690</x>
+        <y>280</y>
+        <width>320</width>
+        <height>240</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Ch2 Gray</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="video_Ch3_GRAY">
+      <property name="geometry">
+       <rect>
+        <x>690</x>
+        <y>540</y>
+        <width>320</width>
+        <height>240</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Ch3 Gray</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="changeto_YCrCb">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>10</y>
+        <width>80</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>YCrCb</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="changeto_HSV">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>40</y>
+        <width>80</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>HSV</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="changeto_BGR">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>70</y>
+        <width>80</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>BGR</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>30</y>
+        <width>131</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Change color space</string>
+      </property>
+     </widget>
+     <widget class="QTextBrowser" name="notification">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>780</y>
+        <width>891</width>
+        <height>200</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>100</y>
+        <width>191</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Find Circle</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
